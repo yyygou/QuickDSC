@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "D:\\anaconda3\\envs\\python36\\python.exe",
+    "files.associations": {
+        "map": "cpp",
+        "utility": "cpp",
+        "vector": "cpp"
+    }
+}
