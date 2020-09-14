@@ -1,8 +1,8 @@
-Quickshift++
+QuickDSC
 ======
 This is not an officially supported Google product
 
-Density-based clustering algorithm based on mode-seeking.
+Clustering by Quick Density Subgraph Estimation.
 
 
 Usage
@@ -12,9 +12,11 @@ Usage
 
 .. code-block:: python
 
-  QuickshiftPP(k, beta) 
-  
+  QuickDSC(k, n_clusters, beta) 
+
 k: number of neighbors in k-NN
+
+n_clusters: number of clustering result
 
 beta: fluctuation parameter which ranges between 0 and 1.
 
@@ -23,7 +25,7 @@ beta: fluctuation parameter which ranges between 0 and 1.
 .. code-block:: python
 
   fit(X)
-  
+
 X is the data matrix, where each row is a datapoint in euclidean space.
 
 fit performs the clustering. The final result can be found in QuickshiftPP.memberships.
@@ -32,22 +34,25 @@ fit performs the clustering. The final result can be found in QuickshiftPP.membe
 
 .. code-block:: python
 
-  from QuickshiftPP import *
+  from QuickDSC import QuickDSC
   import numpy as np
-  
-  X = [np.random.normal(0, 1, 2) for i in range(100)] + [np.random.normal(5, 1, 2) for i in range(100)]
-  y = [0] * 100 + [1] * 100
 
-  # Declare a Quickshift++ model with tuning hyperparameters.
-  model = QuickshiftPP(k=20, beta=.5)
+  X = [np.random.normal(0, 1, 2) for i in range(100)] + [np.random.normal(5, 1, 2) for i in range(100)]
+  label_true = [0] * 100 + [1] * 100
 
   # Compute the clustering.
   model.fit(X)
-  y_hat = model.memberships
+  label_pred = model.labels_
 
-  from sklearn.metrics.cluster import adjusted_rand_score, adjusted_mutual_info_score
-  print("Adj. Rand Index Score: %f." % adjusted_rand_score(y_hat, y))
-  print("Adj. Mutual Info Score: %f." % adjusted_mutual_info_score(y_hat, y))
+  from sklearn import metrics
+
+  ARI = metrics.adjusted_rand_score(label_true, label_pred)
+  AMI = metrics.adjusted_mutual_info_score(label_true, label_pred)
+  NMI = metrics.normalized_mutual_info_score(label_true, label_pred)
+
+  print("Adj. Rand Index Score=" , ARI)
+  print("Adj. Mutual Info Score=", AMI)
+  print("Adj. Mutual Info Score=", AMI)
 
 
 Install
@@ -60,12 +65,16 @@ To install for all users on Unix/Linux::
 
   sudo python setup.py build; python setup.py install
 
+To install for all users on Windows::
+
+
+
 
 
 Dependencies
 =======
 
-python 2.7, scikit-learn
+python 3.6, scikit-learn
 
 
 
