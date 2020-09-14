@@ -47,3 +47,8 @@ if __name__ == '__main__':
     print("Adj. Mutual Info Score=", AMI)
     print("Norm Mutual Info Score=", NMI)
     
+    center_id = model.choosen_original_id
+    
+    Dataprocessing.id_diagram(center_id, model.DS_index, model.cc_set, 1./model.knn_radius, model.delta)
+    Dataprocessing.plot_quickdsc(data, center_id, model.DS_index, model.cc_set)
+    Dataprocessing.show_cluster(data, label_pred, center_id)

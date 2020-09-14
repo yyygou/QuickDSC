@@ -161,8 +161,7 @@ def plot_quickdsc(data, c_original_center, cc_mode_set, cc_set):
     plt.show()
 
 
-def show_cluster(data, label_pred):
-    # plt.figure()
+def show_cluster(data, label_pred, center_id):
     plt.figure(figsize=[6.40,5.60])
 
     X = []
@@ -170,7 +169,12 @@ def show_cluster(data, label_pred):
     for point in data:
         X.append(point[0])
         Y.append(point[1])
-    # plt.scatter(x=X, y=Y, c=label_pred, cmap='Set1', s=8)
     plt.scatter(x=X, y=Y, c=label_pred, s=8)
-    # plt.scatter(x=X, y=Y, c=label_pred, s=8)
+
+    center_X = []
+    center_Y = []
+    for i in center_id:
+        center_X.append(data[i][0])
+        center_Y.append(data[i][1])
+    plt.scatter(x=center_X, y=center_Y, marker='*',c='red',s=150)
     plt.show()
