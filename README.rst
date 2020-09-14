@@ -67,7 +67,7 @@ To install for all users on Unix/Linux::
 
 To install for all users on Windows::
 
-
+  python setup.py build; python setup.py install
 
 
 
