@@ -51,7 +51,7 @@ fit performs the clustering. The final result can be found in QuickshiftPP.membe
 
   print("Adj. Rand Index Score=" , ARI)
   print("Adj. Mutual Info Score=", AMI)
-  print("Adj. Mutual Info Score=", AMI)
+  print("Norm Mutual Info Score=", NMI)
 
 
 Install
