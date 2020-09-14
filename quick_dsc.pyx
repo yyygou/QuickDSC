@@ -137,6 +137,8 @@ class QuickDSC:
     
     k: The number of neighbors (i.e. the k in k-NN density)
 
+    n_clusters: number of clustering result
+
     beta: Ranges from 0 to 1. We choose points that have kernel density of at
         least (1 - beta) * F where F is the mode of the empirical density of
         the cluster
