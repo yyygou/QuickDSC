@@ -29,17 +29,18 @@ X is the data matrix, where each row is a datapoint in euclidean space.
 
 fit performs the clustering. The final result can be found in QuickshiftPP.memberships.
 
-**Example** (mixture of two gaussians):
+**Example**:
 
 .. code-block:: python
 
   from QuickDSC import QuickDSC
+  import Dataprocessing
   import numpy as np
 
-  X = [np.random.normal(0, 1, 2) for i in range(100)] + [np.random.normal(5, 1, 2) for i in range(100)]
-  label_true = [0] * 100 + [1] * 100
+  data, label_true = Dataprocessing.get_data(DATA_File)
 
   # Compute the clustering.
+  model = QuickDSC(k, n_clusters, beta, ann=ann, metric=metric)
   model.fit(X)
   label_pred = model.labels_
 
