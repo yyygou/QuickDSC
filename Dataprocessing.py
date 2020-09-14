@@ -178,3 +178,4 @@ def show_cluster(data, label_pred, center_id):
         center_Y.append(data[i][1])
     plt.scatter(x=center_X, y=center_Y, marker='*',c='red',s=150)
     plt.show()
+
