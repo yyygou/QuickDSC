@@ -104,7 +104,6 @@ def id_diagram(c_original_center, cc_mode_set, cc_set, rho_original, delta):
         center_Y.append(delta_original[c])
     plt.scatter(center_X, center_Y, marker='*', s=200, label='centers of top-K DSs', c='red')
     
-    plt.title('Importance Diagram',fontsize=30)
     plt.xlabel('Density:1/$r_k(x_i)$',fontsize=15)
     plt.ylabel('Geometric Weight:$w_i$',fontsize=15)
     ax=plt.gca()
