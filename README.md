@@ -72,8 +72,18 @@ Clustering results
 =======
 This is the clustering result of S3(Gaussian-15)
 
-<img width="300" height="300" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(id_quickdsc).png" alt="id_quickdsc"/><img  width="300" height="300"  src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(plot_quickdsc).png" alt="plot_quickdsc"/><img  width="300" height="300" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(clusters_quickdsc).png" alt="clusters_quickdsc"/>
-           (a)Importance Diagram                                      (b)Plot Result                                               (c)Clustering Result
+<img width="350" height="350" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(id_quickdsc).png" alt="id_quickdsc"/>
+
+​																								(a)Importance Diagram  
+
+<img  width="350" height="350"  src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(plot_quickdsc).png" alt="plot_quickdsc"/>
+
+
+​                                                                										 (b)Plot Result                                               
+
+<img  width="350" height="350" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(clusters_quickdsc).png" alt="clusters_quickdsc"/>
+
+​																								(c)Clustering Result
 
 Dependencies
 =======
