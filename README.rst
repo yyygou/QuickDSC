@@ -60,7 +60,7 @@ This is the clustering result of S3(Gaussian-15)
 
 
 
-<img src="./results/S3(id_quickdsc).png" alt="id_quickdsc" style="zoom: 25%;" /><img src="./results/S3(plot_quickdsc).png" alt="plot_quickdsc" style="zoom: 25%;" /><img src="./results/S3(clusters_quickdsc).png" alt="clusters_quickdsc" style="zoom: 25%;" />
+<img src="https://github.com/yyygou/QuickDSC/master/results/S3(clusters_quickdsc).png" alt="id_quickdsc" style="zoom: 25%;" /><img src="https://github.com/yyygou/QuickDSC/master/results/S3(clusters_quickdsc).png" alt="plot_quickdsc" style="zoom: 25%;" /><img src="https://github.com/yyygou/QuickDSC/master/results/S3(clusters_quickdsc).png" alt="clusters_quickdsc" style="zoom: 25%;" />
             (a)Importance Diagram                              (b)Plot Result                                         (c)Clustering Result
 
 
