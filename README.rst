@@ -74,7 +74,4 @@ To install for all users on Windows::
 Dependencies
 =======
 
-python 3.6, scikit-learn
-
-
-
+python 3.6, scikit-learn, Cython
