@@ -54,17 +54,6 @@ fit performs the clustering. The final result can be found in QuickshiftPP.membe
   print("Adj. Mutual Info Score=", AMI)
   print("Norm Mutual Info Score=", NMI)
 
-Clustering results
-=======
-This is the clustering result of S3(Gaussian-15)
-
-
-
-<img src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(id_quickdsc).png" alt="id_quickdsc" style="zoom: 25%;" /><img src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(plot_quickdsc).png" alt="plot_quickdsc" style="zoom: 25%;" /><img src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(clusters_quickdsc).png" alt="clusters_quickdsc" style="zoom: 25%;" />
-            (a)Importance Diagram                              (b)Plot Result                                         (c)Clustering Result
-
-
-
 Install
 =======
 
@@ -79,9 +68,18 @@ To install for all users on Windows::
 
   python setup.py build; python setup.py install
 
+Clustering results
+=======
+This is the clustering result of S3(Gaussian-15)
 
+<img width="300" height="300" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(id_quickdsc).png" alt="id_quickdsc"/><img  width="300" height="300"  src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(plot_quickdsc).png" alt="plot_quickdsc"/><img  width="300" height="300" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(clusters_quickdsc).png" alt="clusters_quickdsc"/>
+           (a)Importance Diagram                                      (b)Plot Result                                               (c)Clustering Result
 
 Dependencies
 =======
 
 python 3.6, scikit-learn, Cython
+
+
+
+
