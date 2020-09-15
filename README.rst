@@ -58,9 +58,11 @@ Clustering results
 =======
 This is the clustering result of S3(Gaussian-15)
 
-![id_quickdsc](./results/S3(id_quickdsc).png)
-![plot_quickdsc](./results/S3(plot_quickdsc).png)
-![clusters_quickdsc](./results/S3(clusters_quickdsc).png)
+
+
+<img src="./results/S3(id_quickdsc).png" alt="id_quickdsc" style="zoom: 25%;" /><img src="./results/S3(plot_quickdsc).png" alt="plot_quickdsc" style="zoom: 25%;" /><img src="./results/S3(clusters_quickdsc).png" alt="clusters_quickdsc" style="zoom: 25%;" />
+            (a)Importance Diagram                              (b)Plot Result                                         (c)Clustering Result
+
 
 
 Install
@@ -83,7 +85,3 @@ Dependencies
 =======
 
 python 3.6, scikit-learn, Cython
-
-
-
-# 
