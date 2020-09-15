@@ -58,9 +58,9 @@ Clustering results
 =======
 This is the clustering result of S3(Gaussian-15)
 
-<img src="./results/S3(id_quickdsc).png" style="zoom:50%;" />
-<img src="./results/S3(plot_quickdsc).png" style="zoom:50%;" />
-<img src="./results/S3(clusters_quickdsc).png" style="zoom:50%;" />
+<img src="https://github.com/Michael-Chen-24/QuickDSC/blob/master/results/S3(id_quickdsc).png" style="zoom:50%;" />
+<img src="https://github.com/Michael-Chen-24/QuickDSC/blob/master/results/S3(plot_quickdsc).png" style="zoom:50%;" />
+<img src="https://github.com/Michael-Chen-24/QuickDSC/blob/master/results/S3(clusters_quickdsc).png" style="zoom:50%;" />
 
 Install
 =======
