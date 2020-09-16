@@ -34,25 +34,36 @@ fit performs the clustering. The final result can be found in QuickshiftPP.membe
 .. code-block:: python
 
   from QuickDSC import QuickDSC
+
   import Dataprocessing
+
   import numpy as np
 
   data, label_true = Dataprocessing.get_data(DATA_File)
 
   # Compute the clustering.
+
   model = QuickDSC(k, n_clusters, beta, ann=ann, metric=metric)
+
   model.fit(X)
+
   label_pred = model.labels_
+  
 
   from sklearn import metrics
 
   ARI = metrics.adjusted_rand_score(label_true, label_pred)
+
   AMI = metrics.adjusted_mutual_info_score(label_true, label_pred)
+
   NMI = metrics.normalized_mutual_info_score(label_true, label_pred)
 
   print("Adj. Rand Index Score=" , ARI)
+
   print("Adj. Mutual Info Score=", AMI)
+
   print("Norm Mutual Info Score=", NMI)
+
 
 Install
 =======
@@ -72,16 +83,16 @@ Clustering results
 =======
 This is the clustering result of S3(Gaussian-15)
 
-<img width="350" height="350" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(id_quickdsc).png" alt="id_quickdsc"/>
+<img width="350" height="350" src="./results/S3(id_quickdsc).png" alt="id_quickdsc"/>
 
 ​																								(a)Importance Diagram  
 
-<img  width="350" height="350"  src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(plot_quickdsc).png" alt="plot_quickdsc"/>
+<img  width="350" height="350"  src="./results/S3(plot_quickdsc).png" alt="plot_quickdsc"/>
 
 
 ​                                                                										 (b)Plot Result                                               
 
-<img  width="350" height="350" src="https://github.com/yyygou/QuickDSC/raw/master/results/S3(clusters_quickdsc).png" alt="clusters_quickdsc"/>
+<img  width="350" height="350" src="./results/S3(clusters_quickdsc).png" alt="clusters_quickdsc"/>
 
 ​																								(c)Clustering Result
 
