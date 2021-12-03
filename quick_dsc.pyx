@@ -1,16 +1,16 @@
-# Copyright 2018 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.         
+
 
 import numpy as np
 cimport numpy as np
@@ -311,7 +311,7 @@ class QuickDSC:
 
 
     def fit(self, data):
-        # 第一步，得到density subgraph
+        # construct the density subgraph
         self.find_subgraph(data)
 
         # model.memberships : initial memberships for DS set
@@ -322,7 +322,7 @@ class QuickDSC:
         y_memberships = self.memberships
         
 
-        # 第二步，找到top-K center
+        # determine top-K center
         DS_center = []
         DS_index = []
         center_radius = []
@@ -369,7 +369,7 @@ class QuickDSC:
             choosen_original_id.append(DS_index[idx])
         
 
-        # 第三步，对非top-K center的点按照quickshiftPP remain的方法找到最近的DS
+        # for the non top-K center, remain to the nearest DS
         parent_map = {}
         center_parent = self.parent
         
@@ -381,7 +381,7 @@ class QuickDSC:
         
         center_cluster = {}
 
-        # 第一种方法，用remain
+        # the first method: remain to the nearest point's DS
         for c in choosen_id:
             center_cluster[c] = [c]
             if c not in parent_map:
@@ -394,7 +394,7 @@ class QuickDSC:
                         children.extend(parent_map[child])    
         
         
-        # 第二种方法，用K-Mode，找最近的center
+        # the second method，remain to the nearest top center's DS
         # for c in choosen_id:
         #     center_cluster[c] = []
         # nneigh = self.find_the_nneigh(DS_center, choosen_id, self.ann, self.metric)
