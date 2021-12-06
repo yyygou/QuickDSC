@@ -38,8 +38,8 @@ def read_config():
     config_dict['n_clusters'] = config.getint('section', 'n_clusters')
     return config_dict
     
-# 读取数据集，传入文件名和维度，将数据集读取出来并返回
-# 数据集每一行的格式是：X, Y, Z, ..., label
+# read data function
+# the dataset's format：[X, Y, Z, ..., label]
 def get_data(filename):
     data = []
     label = []
@@ -62,7 +62,7 @@ def get_data(filename):
     # return np.array(data, np.float32), np.array(label, np.int8)
 
 
-# 计算欧几里得距离,a,b分别为两个元组
+# compute the distance of a and b
 def dist(a, b):
     d = len(a)
     buffer = 0.0
@@ -83,10 +83,10 @@ def maxminnorm(array):
 
 def id_diagram(c_original_center, cc_mode_set, cc_set, rho_original, delta):
     '''
-    c_original_center : pick center，选中的K个中心点
+    c_original_center : the top_k center point
     cc_mode_set : the first level cc mode set, （data -- find_cc -- cc set）
-                    在第二层中，所有的CC的密度最高点（下一层的输入点）
-    cc_set: cc point set,在第二层中，cc中所有的点的集合
+                    all highest_density points of connected component（as the input signal of next level）
+    cc_set: cc point set, all points of connected component
 
     '''
     rho_original = maxminnorm(rho_original)
