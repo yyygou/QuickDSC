@@ -54,12 +54,12 @@ def get_data(filename):
             # if row[-1] == 0, int(row[-1]) will fail
             label.append(int(float(row[-1])))
 
-    X = np.array(data)
-    min_max_scaler = preprocessing.MinMaxScaler() 
-    X_minMax = min_max_scaler.fit_transform(X)
-    return X_minMax, np.array(label, np.int8)
+    # X = np.array(data)
+    # min_max_scaler = preprocessing.MinMaxScaler() 
+    # X_minMax = min_max_scaler.fit_transform(X)
+    # return X_minMax, np.array(label, np.int8)
 
-    # return np.array(data, np.float32), np.array(label, np.int8)
+    return np.array(data, np.float32), np.array(label, np.int8)
 
 
 # compute the distance of a and b

@@ -39,6 +39,8 @@ if __name__ == '__main__':
     # read the dataset and label
     data, label_true = Dataprocessing.get_data(DATA_File)
     print(data.shape)
+    # original_data, label_true = Dataprocessing.get_data(DATA_File)
+    # data = Dataprocessing.maxminnorm(original_data)
 
     starttime = datetime.datetime.now()
 
